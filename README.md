@@ -63,19 +63,13 @@ The important part is `dnd (filesChangeEmiter)="onFilesChange($event)"`.
 Now, if you wanna to restrict some kind of file (extension) you just have to put `[extensions] = "['']"` as tag parameter. Like the example, if you wanna work only with `.txt` and `.mp3` files you tell to directive:
 ```
 <div class="dropzone" dnd (filesChangeEmiter)="onFilesChange($event)" [extensions] = "['txt','mp3']">
-  <div class="text-wrapper">
-    <div class="centered">Drop your file here!</div>
-  </div>
-</div>
+  ...
 ```
 As well, the important part is `[extensions] = "['txt','mp3']"` .
 
 If you had to restrict the file by the size you also can set by the directive `[maxSize]="1"`. Note that the number passed is the size of file (in MBs), look the example:
 ```
 <div class="dropzone" dnd (filesChangeEmiter)="onFilesChange($event)" [maxSize]="130">
-  <div class="text-wrapper">
-    <div class="centered">Drop your file here!</div>
-  </div>
-</div>
+  ...
 ```
 In the example the maximum file size allowed is 130mb.
